@@ -14,24 +14,24 @@ function  addMenuPosition1() {
   p.id = 'DF';
   span.id = 'PF';
   img.id = 'IF';
-  RowVar.append(BestBurgers);
-  BestBurgers.append(Thumb);
-    Thumb.append(img);
-  BestBurgers.append(Info);
-  Info.append(h3);
-  Info.append(p);
-  Info.append(span);
+  RowVar.appendChild(BestBurgers);
+  BestBurgers.appendChild(Thumb);
+    Thumb.appendChild(img);
+  BestBurgers.appendChild(Info);
+  Info.appendChild(h3);
+  Info.appendChild(p);
+  Info.appendChild(span);
   document.getElementById('IF').src =  ImgFood.value;
   document.getElementById('NF').innerHTML = NameFood.value;
   document.getElementById('DF').innerHTML  = DescriptionFood.value;
   document.getElementById('PF').innerHTML  = PriceFood.value;
-  ImgFood.value = "";
+/*  ImgFood.value = "";
   DescriptionFood.value = "";
   PriceFood.value = "$";
-  NameFood.value = "";
- return;
+  NameFood.value = "";*/
 }
 
 function  removeMenuPosition() {
-  document.querySelector('.BestBurgers').outerHTML = "";
+  let parent = document.querySelector('.RowVar');
+parent.removeChild(parent.lastChild);
 }
