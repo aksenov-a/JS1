@@ -115,18 +115,23 @@ and open the template in the editor.
     </div>
   </div>
   <div id="MenuFormFlex">
-    <form>
+    <form id="AddMenu">
       <div class="MenuForm"><span>Форма составления меню</span><br>
-<input type = "text"  id = "NameFood"  placeholder="Введите название блюда"> <br>
+<input type = "text"  id = "NameFood" value ="" placeholder="Введите название блюда"> <br>
 <textarea id = "DescriptionFood" rows = "3" cols = "30" placeholder="Введите описание блюда"></textarea> <br>
-<input type = "text"  id = "PriceFood"  placeholder="Введите стоимость блюда"> <br>
+<input type = "text"  id = "PriceFood" value ="$" placeholder="Введите стоимость блюда"> <br>
 <a class="TextForm">Картинка блюда</a>
-<input type = "file"  id = "ImgFood"> <br>
+<input type = "file"  id = "ImgFood" value =""> <br>
 </div>
 </form>
 <div class="BtnAdd">
 <button type="botton" id="CloseForm" onclick="addMenuPosition1()">Добавить</button>
 <button type="botton" id="CloseForm" onclick="removeMenuPosition()">Удалить</button>
+  </div>
+  <div class="FilterMenuForm">
+    <a class="TextFormFilter">Поиск по имени блюда</a>
+    <input type="text" id="search" placeholder="Введите название блюда">
+    <button type="botton" id="CloseForm" onclick="sortingByName()">Сортировка от А до Я</button>
   </div>
 </div>
   <div class="BestMenuContainer">
@@ -138,7 +143,6 @@ and open the template in the editor.
         </div>
       </div>
       <div class="RowVar">
-
       </div>
       <div class="Row">
         <div class="MoreMenu">
@@ -179,4 +183,6 @@ and open the template in the editor.
 </body>
 <script src="js/auth.js"></script>
 <script src="js/changeMenu.js"></script>
+<script src="js/FilterMenu.js"></script>
+<script src="js/sort.js"></script>
 </html>

@@ -281,7 +281,6 @@ overflow-y: hidden;
 .BtnAdd {
   display: flex;
 justify-content: space-between;
-
 }
 .MenuForm {
   display: flex;
@@ -304,6 +303,7 @@ input[type=text] {
   padding: 5px;
   margin:10px 0;
   border-radius: 10px;
+  width: 100%;
 }
 input[type=password] {
   padding: 5px;
@@ -335,6 +335,15 @@ a.TextForm  {
   font-family: "Pacifico", cursive;
   font-style: normal;
 }
+a.TextFormFilter  {
+  color: #F2C64D;
+  font-size: 25px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-style: normal;
+}
 textarea {
   padding: 10px;
   margin:10px 0;
@@ -357,6 +366,12 @@ textarea {
 }
 .RowVar {
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+.RowVarFilter {
+  display: none;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 1200px;

@@ -1,5 +1,6 @@
+ let clicks = 0;
 function  addMenuPosition1() {
-  let RowVar = document.querySelector('.RowVar');
+  const RowVar = document.querySelector('.RowVar');
   let BestBurgers = document.createElement('div');
   let Thumb = document.createElement('div');
   let Info = document.createElement('div');
@@ -10,28 +11,28 @@ function  addMenuPosition1() {
   BestBurgers.className = 'BestBurgers';
   Thumb.className = 'Thumb';
   Info.className = 'Info';
-  h3.id = 'NF';
-  p.id = 'DF';
-  span.id = 'PF';
-  img.id = 'IF';
-  RowVar.appendChild(BestBurgers);
-  BestBurgers.appendChild(Thumb);
-    Thumb.appendChild(img);
-  BestBurgers.appendChild(Info);
-  Info.appendChild(h3);
-  Info.appendChild(p);
-  Info.appendChild(span);
-  document.getElementById('IF').src =  ImgFood.value;
-  document.getElementById('NF').innerHTML = NameFood.value;
-  document.getElementById('DF').innerHTML  = DescriptionFood.value;
-  document.getElementById('PF').innerHTML  = PriceFood.value;
-/*  ImgFood.value = "";
-  DescriptionFood.value = "";
-  PriceFood.value = "$";
-  NameFood.value = "";*/
+  h3.className = 'NF';
+  p.className = 'DF';
+  span.className = 'PF';
+  img.className = 'IF';
+  RowVar.append(BestBurgers);
+  BestBurgers.append(Thumb);
+    Thumb.append(img);
+  BestBurgers.append(Info);
+  Info.append(h3);
+  Info.append(p);
+  Info.append(span);
+  document.getElementsByClassName("IF")[clicks].src = ImgFood;
+  document.getElementsByClassName("NF")[clicks].textContent = NameFood.value;
+  document.getElementsByClassName("DF")[clicks].textContent = DescriptionFood.value;
+  document.getElementsByClassName("PF")[clicks].textContent = PriceFood.value;
+  clicks += 1;
+    document.getElementById("AddMenu").reset();
 }
-
 function  removeMenuPosition() {
-  let parent = document.querySelector('.RowVar');
-parent.removeChild(parent.lastChild);
+  clicks = 0;
+  let parent = document.querySelectorAll('.BestBurgers');
+  for( let i = 0; i < parent.length; i++ ){
+  parent[i].outerHTML = "";
+  }
 }
